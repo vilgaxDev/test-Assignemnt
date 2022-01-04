@@ -16,15 +16,16 @@
     "assetBundlePatterns": [
       "**/*"
     ],
-    "ios": {
-      "supportsTablet": true
-    },
+  
     "android": {
-      "adaptiveIcon": {
+      "adaptiveIcon": { 
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.agwera.Assignment"
+      "package": "com.vilgax.Assignment"
+    },
+    "ios": {
+      "supportsTablet": true
     },
     "web": {
       "favicon": "./assets/favicon.png"

@@ -73,7 +73,7 @@ const Main = () => {
             </View>
 
             <View style={{ backgroundColor: '#fff', paddingTop: 20, borderTopLeftRadius: 20, borderTopRightRadius: 20, marginTop: -40 }} >
-                <Text style={{ color: '#4A5E80', fontSize: 20, fontWeight: 'bold', marginLeft: 30, marginBottom: 10 }}>Your Goals</Text>
+                <Text style={{ color: '#4A5E80', fontSize: 20, fontWeight: 'bold', marginLeft: 30, marginBottom: 10 }}>Your Goal</Text>
 
                 <View style={[{ height: '22%', backgroundColor: 'white', marginHorizontal: 15, borderRadius: 20, justifyContent: 'space-between', flexDirection: 'row' }, styles.cardShadow]}>
                     <View style={{ flexDirection: 'column', marginLeft: 20, marginTop: 20 }} >
