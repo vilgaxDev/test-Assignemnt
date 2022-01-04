@@ -1,5 +1,6 @@
-import React, { useState, useRef, useEffect } from 'react'
+
 import { StyleSheet, Text, TouchableOpacity, View, Animated, Easing } from 'react-native'
+import React, { useState, useRef, useEffect } from 'react'
 import Constants from 'expo-constants';
 import { FontAwesome5, Feather } from '@expo/vector-icons';
 
@@ -8,7 +9,7 @@ import { FontAwesome5, Feather } from '@expo/vector-icons';
 const Main = () => {
 
     const [visible, setVisible] = useState(false);
-    const [message, setMessage] = useState('This is an in-app notification snackbar to show to the user when they perform an action.Clicking it should change the text')
+    const [message, setMessage] = useState('This is an in-app notification snackbar show  the user when they perform an action.Clicking it should change the text')
     const fadeAnim = useRef(new Animated.Value(0)).current
 
 
@@ -17,7 +18,7 @@ const Main = () => {
             fadeAnim,
             {
                 toValue: 1,
-                duration: 1000,
+                duration: 900,
                 easing: Easing.linear,
                 useNativeDriver: true
             }
@@ -113,7 +114,7 @@ const Main = () => {
                 <Text style={{ color: 'white', fontSize: 20, fontWeight: 'bold' }}>Show Snackbar</Text>
             </TouchableOpacity>
 
-            {/* snackbar */}
+  
             {
                 visible ? (
                     <Animated.View style={[styles.snackContainer, styles.cardShadow, { opacity: fadeAnim}]}>
@@ -143,6 +144,16 @@ const styles = StyleSheet.create({
         flex: 1,
         marginTop: Constants.statusBarHeight
     },
+
+    snackbar: {
+        backgroundColor: '#e8177f',
+        borderRadius: 15,
+        padding: 15,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        width: '99%'
+    },
     cardShadow: {
         shadowColor: '#000',
         shadowOffset: {
@@ -153,22 +164,7 @@ const styles = StyleSheet.create({
         shadowRadius: 1.41,
         elevation: 20
     },
-    snackbar: {
-        backgroundColor: '#e8177f',
-        borderRadius: 15,
-        padding: 15,
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        width: '99%'
-    },
-    snackContainer:{
-        position: 'absolute', 
-        top: 10, 
-        flex: 1, 
-        alignItems: 'center', 
-        justifyContent: 'center',
-    },
+   
     button: {
         backgroundColor: '#00e771',
         width: '90%',
@@ -181,5 +177,12 @@ const styles = StyleSheet.create({
         position: 'absolute',
         bottom: 35,
         alignSelf: 'center'
-    }
+    },
+    snackContainer:{
+        position: 'absolute', 
+        top: 10, 
+        flex: 1, 
+        alignItems: 'center', 
+        justifyContent: 'center',
+    },
 })
