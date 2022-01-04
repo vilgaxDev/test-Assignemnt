@@ -1,13 +1,10 @@
 {
   "minify": false,
-  
   "https": false,
   "hostType": "lan",
   "lanType": "ip",
   "dev": true,
+  "urlRandomness": null,
   "scheme": null,
-  "devClient": false,
-  "urlRandomness": null
-  
- 
+  "devClient": false
 }
